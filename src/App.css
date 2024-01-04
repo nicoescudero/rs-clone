@@ -1,38 +1,321 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, footer,.post, .main-post,.btn-Download {
+  background-color: #020202;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar {
+  background-color: #020202e1;
+  backdrop-filter: blur(0.4rem);
   color: white;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar, .post > img,.main-post > img, .options-footer, .list-games,.selection{
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-logo > a > img {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-first-options, .list, .platform {
+  width: 40%;
+}
+
+.nav-first-options {
+  height: 65px;
+  margin-top: 5px;
+}
+
+.navbar, .nav-first-options, .nav-first-options, .nav-other-options, .section-content,
+.date-info, .about-footer, .selection, .platform,.section-download, .launcher-info, footer {
+  display: flex;
+}
+
+.nav-button, .nav-button-launcher, .nav-button-search, .nav-button-user, 
+.post, .main-post, .social-icon-footer, .option-footer, .post-game,
+.btn-platform, .btn-ViewMore, .btn-Download{
+  cursor: pointer;
+}
+.nav-button, .nav-button-search, .nav-button-user, .section, .title-game,
+.option-footer, .social-icon-footer,.btn-platform, .btn-ViewMore, .btn-Download, footer {
+  color: #fff
+}
+.nav-button, .nav-button-search, .nav-button-user, .option-footer, .social-icon-footer,.btn-ViewMore {
+  background-color: inherit;
+}
+
+.nav-button {
+  width: 100px;
+  font-size: 15px;
+  border: 2px solid transparent;
+}
+
+.nav-button:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.nav-button-launcher, .section > h3, .description-game, .launcher-info > h3,
+.section-download > p, .btn-Download {
+  font-weight: bold;
+}
+
+.nav-button-launcher,.btn-platform:hover,.btn-ViewMore:hover,.btn-Download:hover {
+  background-color: #fcaf17;
+  color: #020202;
+}
+
+.nav-button-launcher,.about-footer > img,.btn-ViewMore, .btn-Download {
+  border-radius: 5px;
+}
+
+.nav-button-launcher {
+ font-size: 15px;
+ text-transform: uppercase;
+ padding: 10px;
+ border: 1px solid #fcaf17;
+}
+
+.nav-button-launcher:hover {
+  background-color: rgb(216, 142, 5);
+}
+
+.nav-button-search, .nav-button-user,.btn-Download, .option-footer, .social-icon-footer {
+  border: none;
+}
+
+.nav-button-search, .nav-button-user,.nav-first-options, .nav-other-options, .date-info {
+  align-content: center;
+}
+
+.nav-button-search, .nav-button-user {
+  margin: 0px 20px;
+}
+
+.nav-button-search-logo, .nav-button-user-logo{
+  width: 25px;
+  height: 25px;
+}
+
+.nav-button-user-logo {
+  padding: 20%;
+  background-color: rgb(43, 42, 42);
+  border-radius: 50%;
+}
+
+.section {
+  font-size: large;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.section > h3 {
+  font-size: x-large;
+}
+
+.list, .list-games, .launcher{
+  display: grid;
+}
+
+.list {
+  margin-left: 2%;
+  grid-template-columns: repeat(1,minmax(0,100%));
+  grid-template-rows: repeat(2, minmax(0,1fr));
+  grid-gap: 3%;
+}
+
+.main{
+  background-color: #090909;
+}
+
+.post, .main-post, .post > img,.main-post > img{
+  border-radius: 10px;
+}
+
+.post, .main-post{
+  height: auto;
+  border: 1px solid #555;
+  padding-bottom: 1%;
+}
+
+.post > img,.main-post > img, .about-footer > img{
+  height: fit-content;
+}
+
+.post > img,.main-post > img, .post-game > img{
+  object-fit: cover;
+}
+
+.about-footer > img, .launcher > img, .logo-rs {
+  object-fit: contain;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.date-info {
+  text-align: center;
+  font-size: 15px;
+  align-items: center;
+}
+
+.title-game{
+  font-weight: 700;
+  display: inline-block;
+  line-height: 1.6;
+  padding: 0 0.75rem 0;
+}
+
+.date{
+  color: #888;
+}
+
+.description-game{
+  font-size: 20px;
+  padding: 0.75rem;
+}
+
+.title-game, .description-game{
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+.selection, footer {
+  justify-content: space-between;
+}
+
+footer {
+  height: 20vh;
+  padding: 3rem 10rem;
+}
+
+.about-footer {
+  width: 50%;
+}
+
+.options-footer {
+  margin: 0 5%;
+}
+
+.about-footer > img {
+  width: 10%;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+}
+
+.option-footer, .social-icon-footer {
+  margin: 0 10px;
+}
+
+.option-footer{
+  font-size: small;
+}
+
+.social-icon-footer{
+  font-size: large;
+}
+
+.social-icon-footer:hover, .option-footer:hover {
+  color: #fcaf17;
+}
+
+.list-games{
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  grid-gap: 1%;
+}
+
+.post-game{
+  width: 98%;
+}
+
+.post-game > img{
+  width: inherit;
+}
+
+.selection, .list-games, .section > h3{
+  margin: 0 0 1.5rem;
+}
+
+.platform{
+  justify-content: end;
+}
+
+.btn-platform{
+  padding: 5px 15px;
+  background-color: #888;
+  border: 1px solid #888;
+  border-radius: 15px;
+  margin: 0 10px;
+}
+
+.btn-platform:hover, .btn-ViewMore:hover, .btn-Download:hover{
+  transition: 0.7s;
+}
+
+.nav-button-launcher:hover, .nav-button:hover{
+  transition: 0.3s;
+}
+
+.btn-platform:hover{
+  border: 1px solid #fcaf17;
+}
+
+.btn-ViewMore{
+  width: max-content;
+  padding: 10px 20px;
+  border: 1px solid #090909;
+  border-bottom: 2px solid #fcaf17;
+  font-size: large;
+  font-weight: normal;
+  margin: 0 45%;
+}
+
+.launcher{
+  height: 60vh;
+  padding: 5%;
+  background: #FF4E50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #020202;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+}
+
+.logo-rs{
+  width: 20%;
+}
+
+.section-download{
+  flex-direction: column;
+}
+
+.launcher-info > h3{
+  font-size: 25px;
+  margin: 1% 30px;
+}
+
+.section-download > p{
+  font-size: larger;
+  align-self: center;
+  margin: 20px 0;
+}
+
+.btn-Download {
+  width: fit-content;
+  margin: 20px auto;
+  box-shadow: 1px 1px 2px 2px #02020299;
+  padding: 15px 50px;
+  text-transform: uppercase;
 }
