@@ -29,7 +29,9 @@ const Games = () => {
               <img src={RO} alt="" />
           </div>
         </div>
-        <button className='btn-ViewMore'>View More</button>
+        <div className='btn-ViewMore-Container'>
+          <button className='btn-ViewMore'>View More</button>
+        </div>
       </section>
   )
 }
